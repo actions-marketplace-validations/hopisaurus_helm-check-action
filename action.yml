@@ -1,6 +1,8 @@
 name: 'Helm Check Action'
 description: 'Run Helm Lint and Helm template to check Helm files'
-icon: 'anchor'
+branding:
+  icon: 'anchor'
+  color: 'blue'
 inputs:
   chart-values:
     description: 'Path to the values.yaml'
