@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  namespace: {{ if and .Values.config .Values.config.name }}
+    {{- .Values.config.namespace | default .Values.config.name }}
+  {{- end }}
+  labels:
+    name: {{ .Values.config.name }}-env
+  name: env
+data:
+  {{- range .Values.services }}
+  {{- range .containers }}
+  {{- range .envs }}
+  {{ .key }}: {{ printf "%s" .value | quote }}
+  {{- end }}
+  {{- end }}
+  {{- range .initContainers }}
+  {{- range .envs }}
+  {{ .key }}: {{ printf "%s" .value | quote }}
+  {{- end }}
+  {{- end }}
+  {{- end }}

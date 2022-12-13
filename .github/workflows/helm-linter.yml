@@ -1,0 +1,18 @@
+name: Check Helm YAMLs with helm lint
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+
+jobs:
+  helm-check:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    
+    - name: helm-check
+      uses: hopisaurus/helm-check-action@0.1.0
+      env:
+        CHART_LOCATION: ./test-helm
+        CHART_VALUES: ./test-helm/test-values.yaml

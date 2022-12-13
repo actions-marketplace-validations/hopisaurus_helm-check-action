@@ -1,0 +1,10 @@
+config:
+  name: test-template
+  env: dev
+services:
+  - containers:
+      - image: python:latest
+        name: test
+        envs:
+          - key: "NODE_OPTIONS"
+            value: "--max-old-space-size=4096"

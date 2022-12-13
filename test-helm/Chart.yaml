@@ -1,0 +1,9 @@
+apiVersion: "v2"
+name: "test-template"
+version: "0.1.0"
+description: "This is the template for development"
+home: "https://github.com/hopisaurus/helm-check-action"
+maintainers: 
+  - name: "hopisaurus"
+    email: "me@hopisaurus.com"
+icon: "http://stackoverflow.com/favicon.ico"
