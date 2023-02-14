@@ -1,4 +1,4 @@
-FROM alpine/helm:3.5.3
+FROM alpine/helm:3.10.2
 
 LABEL version="0.1.0"
 LABEL repository="https://github.com/hopisaurus/helm-check-action"
