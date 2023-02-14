@@ -12,7 +12,7 @@ jobs:
     - uses: actions/checkout@master
     
     - name: helm-check
-      uses: hopisaurus/helm-check-action@v0.1.0
+      uses: hopisaurus/helm-check-action@v0.1.1
       env:
         CHART_LOCATION: ./test-helm
         CHART_VALUES: ./test-helm/test-values.yaml
